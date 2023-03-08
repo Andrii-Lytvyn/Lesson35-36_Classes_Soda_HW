@@ -18,15 +18,13 @@ public class Main {
     int choose = Integer.parseInt(br.readLine());
     if (choose == 1) {
       System.out.print(newSoda.GetMyDrinkString());
-    }
-    else if (choose == 2) {
+    } else if (choose == 2) {
       System.out.print("Введите добавку: ");
       String adding = br.readLine();
-      System.out.print(newSoda.GetMyDrinkString() + " и {");
-      newSoda.setTopping(adding);
-      System.out.println(newSoda.GetMyDrinkString()+"}");
-    }
-   else {
+      Soda sodaTopping = new Soda(adding);
+      System.out.println(sodaTopping.GetMyDrinkString());
+
+    } else {
       System.out.println("Error");
     }
   }

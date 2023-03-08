@@ -5,25 +5,21 @@
 // возвращающий строку Газировка и {добавка} в случае наличия добавки.
 ////  Если добавки нет, нужно вернуть строку "Обычная газировка".
 
-
 public class Soda {
-  private String topping;
-
+  private String typeSoda;
   public Soda() {
-    this.topping = "Regular soda";
+    typeSoda = "Regular soda";
   }
-
-  public void setTopping(String topping) {
+  private String topping;
+  public Soda(String topping) {
+    this.typeSoda = "Regular soda";
     this.topping = topping;
   }
-
-//  public String getTopping() {
-//    return topping;
-//  }
-
   public String GetMyDrinkString() {
-     return topping;
+    if (topping == null) {
+      return typeSoda;
+    } else {
+      return typeSoda + " " + topping;
+    }
   }
-
-
 }
